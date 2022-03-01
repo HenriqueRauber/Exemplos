@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>@ViewBag.Page</h1>
+
+<div class="tab">
+	<button class="tablinks active" onclick="openCity(event, 'html')">HTML</button>
+	<button class="tablinks" onclick="openCity(event, 'css')">CSS</button>
+	<button class="tablinks" onclick="openCity(event, 'js')">JS</button>
+	<button class="tablinks" onclick="openCity(event, 'example')">Example</button>
+</div>
+
+<div class="container">
+	<div id="html" class="tabcontent" style="display: block;">
+		<textarea readonly name="message">@ViewBag.html</textarea>
+	</div>
+	<div id="css" class="tabcontent">
+		<textarea readonly name="message">@ViewBag.css</textarea>
+	</div>
+	<div id="js" class="tabcontent">
+		<textarea readonly name="message">@ViewBag.js</textarea>
+	</div>
+	<div id="example" class="tabcontent">
+		<iframe class='example' src="@("/html/" + ViewBag.Page + ".html")" />
+	</div>
+</div>
+ 
