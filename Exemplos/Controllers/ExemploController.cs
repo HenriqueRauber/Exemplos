@@ -6,11 +6,7 @@ namespace Exemplos.Controllers
     {
         public IActionResult Index(string nome)
         {
-            var html = "HTML Text example..";
-            var css = "CSS Text example..";
-            var js = "JS Text example..";
-
-            Dictionary<string, string> files = new Dictionary<string, string>()
+            Dictionary<string, string> files = new()
             {
                 {"html", string.Empty },
                 {"css", string.Empty },
